@@ -1,0 +1,133 @@
+<html lang="en">
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Cloth Products</title>
+</head>
+<body>
+<table id="XXIBM_PRODUCT_CATALOGUE" style="width:100%">
+    {% if apparels %}
+<!--    <tr>
+        <th>Available Apparels</th>
+    </tr> -->
+		{% for row in apparels %}
+<!--		<tr>
+			<td>{{row[0]}}</td>
+		</tr>  
+		     <td>-->		 
+                  {% if row[0] == 'Athletic wear' %}
+				  <a class="link" href="/athwear">
+				  <p style="float: left; font-size: 9pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 0.5em;"><img src="{{url_for('static', filename='athleticwear.jpg')}}" style="width: 100%">Athletic wear</p>
+				  </a>
+                  {% endif %}
+             <!--</td>
+			  <td> -->
+                  {% if row[0] == 'Clothing accessories' %}
+				  <p style="float: left; font-size: 9pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 0.5em;"><img src="{{url_for('static', filename='clothingaccessories.jpg')}}" style="width: 100%">Clothing accessories</p>				  
+                  {% endif %}
+             <!--</td>
+			  <td> -->
+                  {% if row[0] == 'Coats and jackets' %}
+				  <p style="float: left; font-size: 9pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 0.5em;"><img src="{{url_for('static', filename='coatsjackets.jpg')}}" style="width: 100%">Coats and jackets</p>				  
+                  {% endif %}
+				<p style="clear: both;">	
+             <!-- </td>	
+			  <td> -->
+                  {% if row[0] == 'Disposable clothes' %}
+				  <p style="float: left; font-size: 9pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 0.5em;"><img src="{{url_for('static', filename='disposableclothes.jpg')}}" style="width: 100%">Disposable clothes</p>				  
+                  {% endif %}
+             <!--</td>	
+			  <td> -->
+                  {% if row[0] == 'Dresses and skirts and saris and kimonos' %}
+                  <p style="float: left; font-size: 9pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 0.5em;"><img src="{{url_for('static', filename='skirtsarees.jpg')}}" style="width: 100%">Dresses and skirts and saris and kimonos</p>				  
+                  {% endif %}
+             <!--</td>				 
+			  <td>-->
+                  {% if row[0] == 'Folkloric clothing' %}
+				  <p style="float: left; font-size: 9pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 0.5em;"><img src="{{url_for('static', filename='Folkloricclothing.jpg')}}" style="width: 100%">Folkloric clothing</p>				  
+                  {% endif %}
+				<p style="clear: both;">	
+             <!--</td>				 
+			  <td> -->
+                  {% if row[0] == 'Hosiery' %}
+				  <p style="float: left; font-size: 9pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 0.5em;"><img src="{{url_for('static', filename='hosiery.jpg')}}" style="width: 100%">Hosiery</p>				  				  
+                  {% endif %}
+             <!--</td>				 
+			  <td> -->
+                  {% if row[0] == 'Nightwear' %}
+                  <p style="float: left; font-size: 9pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 0.5em;"><img src="{{url_for('static', filename='nightwear.jpg')}}" style="width: 100%">Nightwear</p>				  				  				  
+                  {% endif %}
+             <!--</td>	
+			  <td> -->
+                  {% if row[0] == 'Overalls and coveralls' %}
+				  <p style="float: left; font-size: 9pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 0.5em;"><img src="{{url_for('static', filename='overallcoverall.jpg')}}" style="width: 100%">Overalls and coveralls</p>				  				  				  
+                  {% endif %}
+				<p style="clear: both;">	
+             <!--</td>	
+			  <td> -->
+                  {% if row[0] == 'Shirts and blouses' %}
+                  <p style="float: left; font-size: 9pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 0.5em;"><img src="{{url_for('static', filename='shirtsandblouses.jpg')}}" style="width: 100%">Shirts and blouses</p>				  				  				  
+                  {% endif %}
+             <!--</td>	
+			  <td> -->
+                  {% if row[0] == 'Slacks and trousers and shorts' %}
+				    <p style="float: left; font-size: 9pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 0.5em;"><img src="{{url_for('static', filename='slackstrousers.jpg')}}" style="width: 100%">Slacks and trousers and shorts</p>				  				  				  
+                  {% endif %}
+             <!--</td>				 
+			 <td> -->
+                  {% if row[0] == 'Suits' %}
+				  <p style="float: left; font-size: 9pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 0.5em;"><img src="{{url_for('static', filename='suits.jpg')}}" style="width: 100%">Suits</p>				  				  				  
+                  {% endif %}
+				  <p style="clear: both;">	 
+             <!--</td>	
+			 <td> -->
+                  {% if row[0] == 'Sweaters' %}
+				  <p style="float: left; font-size: 9pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 0.5em;"><img src="{{url_for('static', filename='sweaters.jpg')}}" style="width: 100%">Sweaters</p>				  				  				  				  
+                  {% endif %}
+             <!-- </td>				 
+			 <td> -->
+                  {% if row[0] == 'Swimwear' %}                  
+				  <p style="float: left; font-size: 9pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 0.5em;"><img src="{{url_for('static', filename='swimwear.jpg')}}" style="width: 100%">Swimwear</p>				  				  				  				  
+                  {% endif %}
+             
+			 ,<!--</td>	
+			 <td> -->
+                  {% if row[0] == 'Tshirts' %}
+				  <p style="float: left; font-size: 9pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 0.5em;"><img src="{{url_for('static', filename='tshirts.jpg')}}" style="width: 100%">Tshirts</p>				  				  				  				  
+                  {% endif %}
+				  <p style="clear: both;">	 
+             <!--</td>	
+			 <td> -->
+                  {% if row[0] == 'Undergarments' %}
+				  <p style="float: left; font-size: 9pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 0.5em;"><img src="{{url_for('static', filename='undergarments.jpg')}}" style="width: 100%">Undergarments</p>				  				  				  				  
+                  {% endif %}
+             <!--</td>	
+			 <td> -->
+                  {% if row[0] == 'Uniforms' %}                  
+				  <p style="float: left; font-size: 9pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 0.5em;"><img src="{{url_for('static', filename='uniform.jpg')}}" style="width: 100%">Uniforms</p>				  				  				  				  				  
+                  {% endif %}
+             <!--</td>	
+			 <td> -->
+                  {% if row[0] == 'Waistcoats' %}
+				  <p style="float: left; font-size: 9pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 0.5em;"><img src="{{url_for('static', filename='waistcoat.jpg')}}" style="width: 100%">Waistcoats</p>				  				  				  				  				  
+                  {% endif %}
+				  <p style="clear: both;">	 	 
+		{% endfor %}
+    {% endif %}
+</table>
+</body>
+</html>

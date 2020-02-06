@@ -1,0 +1,46 @@
+<HTML>
+<BODY bgcolor="cyan">
+    <center>
+	<title>Fertile Mind e-cart shop</title>
+	<br>
+	<br>
+	<H1>Welcome To Fertile Mind e-Cart Shopping Portal !</H1> <br>
+	<br>
+	<td>
+	{% if athwear %}	
+	<h2> Please Select The Item </h2>
+	<select id = "selectbox1" name="item" width="300px">
+	<option>Please Select The Item</option>
+	{% for row in athwear %}
+		<option value="{{ row[0] }}" SELECTED>{{ row[0] }}</option>
+	{% endfor %}
+	</select>
+	<h2> Please Select The Brand </h2>
+	<select id = "selectbox2" name="brand" width="300px">
+	<option>Please Select The Brand</option>
+	{% for row in athwear %}
+		<option value="{{ row[1] }}" SELECTED>{{ row[1] }}</option>
+	{% endfor %}
+	</select>
+	<h2> Please Select The Size </h2>
+	<select id = "selectbox3" name="size" width="300px">
+	<option>Please Select The Size</option>
+	{% for row in athwear %}
+		<option value="{{ row[2] }}" SELECTED>{{ row[2] }}</option>
+	{% endfor %}
+	</select>	
+	<h2> Please Select The Colour </h2>
+	<select id = "selectbox4" name="colour" width="300px">
+	<option>Please Select The Colour</option>
+	{% for row in athwear %}
+		<option value="{{ row[3] }}" SELECTED>{{ row[3] }}</option>
+	{% endfor %}
+	</select> 
+	 {% endif %}	 	
+	</td>
+	<td>
+    <input class="button1" type="submit" value="Select">
+	</td>    
+    </center>
+</BODY>
+</HTML>
